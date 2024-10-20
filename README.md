@@ -2,6 +2,10 @@
 
 This is an [Expo](https://expo.dev) 
 
+## Figma Design
+
+[Dink Derby Design](https://www.figma.com/design/E8gsxdm9Ghm1cH2LiEzdzI/Dink-Derby?node-id=0-1&node-type=canvas&t=X4A1yDJixdO2A0iC-0)
+
 ## Get started
 
 1. Install dependencies
