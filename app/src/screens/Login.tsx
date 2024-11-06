@@ -1,6 +1,9 @@
 // src/screens/Login.tsx
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { Button } from '@/components/ui/button';
+import { View } from 'react-native';
+import { Input } from '@/components/ui/input';
+import { Text } from '@/components/ui/text';
 
 interface LoginProps {
   navigation: any;
@@ -16,30 +19,27 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <TextInput
-        placeholder="Username"
-        style={styles.input}
+    <View className="flex-1 justify-center items-center p-4">
+      <Text className="text-2xl font-bold mb-4">Login</Text>
+      <Input
+        className="mb-4 w-full"
         value={username}
         onChangeText={setUsername}
+        placeholder="Username"
       />
-      <TextInput
-        placeholder="Password"
-        style={styles.input}
-        secureTextEntry
+      <Input
+        className="mb-4 w-full"
         value={password}
         onChangeText={setPassword}
+        placeholder="Password"
+        secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
+      <Button className="w-full" onPress={handleLogin}>
+        Login
+      </Button>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', padding: 16 },
-  title: { fontSize: 24, marginBottom: 16, textAlign: 'center' },
-  input: { borderWidth: 1, padding: 8, marginBottom: 16 },
-});
 
 export default Login;
